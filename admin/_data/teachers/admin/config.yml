@@ -1,0 +1,61 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "teachers"
+    label: "Teachers"
+    folder: "_data/teachers"
+    create: true
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Subject", name: "subject", widget: "string"}
+      - {label: "Qualification", name: "qualification", widget: "string"}
+      - {label: "Designation", name: "designation", widget: "string"}
+
+  - name: "students"
+    label: "Students"
+    folder: "_data/students"
+    create: true
+    fields:
+      - {label: "Class Name", name: "class_name", widget: "string"}
+      - {label: "Boys", name: "boys", widget: "number"}
+      - {label: "Girls", name: "girls", widget: "number"}
+      - {label: "Total", name: "total", widget: "number"}
+
+  - name: "fees"
+    label: "Fee Structure"
+    folder: "_data/fees"
+    create: true
+    fields:
+      - {label: "Class", name: "class", widget: "string"}
+      - {label: "Fee", name: "fee", widget: "string"}
+
+  - name: "gallery"
+    label: "Gallery"
+    folder: "_data/gallery"
+    create: true
+    fields:
+      - {label: "Image URL", name: "image_url", widget: "image"}
+      - {label: "Caption", name: "caption", widget: "string"}
+
+  - name: "videos"
+    label: "Videos"
+    folder: "_data/videos"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "YouTube URL", name: "video_url", widget: "string"}
+
+  - name: "settings"
+    label: "School Settings"
+    folder: "_data/settings"
+    create: false
+    fields:
+      - {label: "School Name", name: "school_name", widget: "string"}
+      - {label: "Address", name: "address", widget: "text"}
+      - {label: "Phone", name: "phone", widget: "string"}
+      - {label: "Email", name: "email", widget: "string"}
